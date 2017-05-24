@@ -15,6 +15,7 @@ class BrainsController < ApplicationController
   # GET /brains/new
   def new
     @brain = Brain.new
+    @zombies = Zombie.all
   end
 
   # GET /brains/1/edit
@@ -28,7 +29,7 @@ class BrainsController < ApplicationController
 
     respond_to do |format|
       if @brain.save
-        format.html { redirect_to @brain, notice: 'El cerebro ha sido creado' }
+        format.html { redirect_to @brain, notice: 'Zombie was successfully created.' }
         format.json { render :show, status: :created, location: @brain }
       else
         format.html { render :new }
@@ -42,7 +43,7 @@ class BrainsController < ApplicationController
   def update
     respond_to do |format|
       if @brain.update(brain_params)
-        format.html { redirect_to @brain, notice: 'El cerebro a sido actualizado.' }
+        format.html { redirect_to @brain, notice: 'Brain was successfully updated.' }
         format.json { render :show, status: :ok, location: @brain }
       else
         format.html { render :edit }
@@ -56,7 +57,7 @@ class BrainsController < ApplicationController
   def destroy
     @brain.destroy
     respond_to do |format|
-      format.html { redirect_to brains_url, notice: 'Ya no tiene el cerebro.' }
+      format.html { redirect_to brains_url, notice: 'Brain was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
