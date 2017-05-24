@@ -12,18 +12,21 @@
   <% end %>
 
   <div class="field">
+    <% options = options_from_collection_for_select(@zombies, 'id', 'name') %>
+    <%= select_tag(:zombie_id, options) %>
+  </div>
+
+  <div class="field">
     <%= f.label :flavor %>
     <%= f.text_field :flavor %>
   </div>
 
-<!-- Agregamos iq y fresh -->
-
- <div class="field">
+  <div class="field">
     <%= f.label :iq %>
     <%= f.number_field :iq %>
   </div>
 
- <div class="field">
+  <div class="field">
     <%= f.label :fresh %>
     <%= f.check_box :fresh %>
   </div>
