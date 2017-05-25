@@ -12,9 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :zombie %>
-    <% options = options_from_collection_for_select(@zombies, 'id', 'name') %>
-    <%= select_tag(:zombie_id, options) %>
+    <%= f.collection_select:zombie_id,Zombie.order(:name),:id,:name %>
   </div>
 
   <div class="field">
