@@ -18,7 +18,13 @@
       <tr>
         <td><%= brain.flavor %></td>
         <td><%= brain.iq %></td>
-        <td><%= brain.fresh %></td>
+        <td>
+          <% if brain.fresh %>
+            <%= image_tag 'brains/brain.png', class: 'brain-image' %>
+          <% else %>
+            <%= image_tag 'brains/brain_filled.png', class: 'brain-image' %>
+          <% end %>
+        </td>        
         <td><%= link_to 'Mostrar', brain %></td>
         <td><%= link_to 'Editar', edit_brain_path(brain) %></td>
         <td><%= link_to 'Eliminar', brain, method: :delete, data: { confirm: 'Estas seguro compa?' } %></td>

@@ -5,6 +5,7 @@ class ZombiesController < ApplicationController
   # GET /zombies.json
   def index
     @zombies = Zombie.all
+    @rotten_zombies = Zombie.where(rotten: true)
   end
 
   # GET /zombies/1
