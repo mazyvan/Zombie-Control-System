@@ -25,9 +25,9 @@
             <%= image_tag 'brains/brain_filled.png', class: 'brain-image' %>
           <% end %>
         </td>        
-        <td><%= link_to 'Mostrar', brain %></td>
-        <td><%= link_to 'Editar', edit_brain_path(brain) %></td>
-        <td><%= link_to 'Eliminar', brain, method: :delete, data: { confirm: 'Estas seguro compa?' } %></td>
+        <td><%= link_to 'Show', brain %></td>
+        <td><%= link_to 'Edit', edit_brain_path(brain) %></td>
+        <td><%= link_to 'Destroy', brain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
