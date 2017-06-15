@@ -25,5 +25,10 @@
   <%= @zombie.rotten %>
 </p>
 
+<p>
+  <strong>Avatar:</strong>
+  <%= image_tag(@zombie.avatar_url.to_s) %>
+</p>
+
 <%= link_to 'Edit', edit_zombie_path(@zombie) %> |
 <%= link_to 'Back', zombies_path %>

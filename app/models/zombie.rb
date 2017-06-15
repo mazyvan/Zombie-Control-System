@@ -13,4 +13,5 @@ class Zombie < ApplicationRecord
   validates :bio, length: { maximum: 100 }
   validates :age, numericality: { only_integer: true }
   validates :email, uniqueness: true, email: true
+  mount_uploader :avatar, AvatarUploader
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170524124951) do
+ActiveRecord::Schema.define(version: 20170613131802) do
 
   create_table "brains", force: :cascade do |t|
     t.string   "flavor"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20170524124951) do
     t.datetime "updated_at", null: false
     t.string   "email"
     t.boolean  "rotten"
+    t.string   "avatar"
   end
 
 end

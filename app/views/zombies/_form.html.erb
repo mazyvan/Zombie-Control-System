@@ -36,6 +36,11 @@
     <%= f.check_box :rotten %>
   </div>
 
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar, multiple: false %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
