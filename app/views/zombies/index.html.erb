@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Picture</th>
       <th>Name</th>
       <th>Bio</th>
       <th>Age</th>
@@ -18,6 +19,7 @@
   <tbody>
     <% @zombies.each do |zombie| %>
       <tr>
+        <td><%= image_tag(zombie.avatar_url.to_s, class: "avatar-in-index") %></td>
         <td><%= zombie.name %></td>
         <td><%= zombie.bio %></td>
         <td><%= zombie.age %></td>
