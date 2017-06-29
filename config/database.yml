@@ -9,9 +9,18 @@ default: &default
   pool: 5
   timeout: 5000
 
+# development:
+#   <<: *default
+#   database: db/development.sqlite3
+
 development:
-  <<: *default
-  database: db/development.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: zcsruby
+  pool: 5
+  username: zcsruby
+  password: zcsruby
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

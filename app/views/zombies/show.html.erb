@@ -1,3 +1,4 @@
+<h3>Profile</h3>
 <br>
 <div class="row container">
   <%= link_to 'Edit', edit_zombie_path(@zombie) %> |
@@ -36,4 +37,30 @@
       <%= @zombie.rotten %>
     </p>
   </div>
+
+  <div class="col l12 s12">
+    <br>
+    <h5>Add Brain</h5>
+    <div id="brains">
+      <%= render :partial => @zombie.brains.reverse %>
+    </div>
+    <%= form_for([@zombie, Brain.new], remote:true) do |f| %>
+      <div class="field">
+        <%= f.label :Flavor %>
+        <%= f.text_field :flavor %>
+      </div>
+      <div class="field">
+        <%= f.label :IQ %>
+        <%= f.number_field :iq %>
+      </div>
+      <div class="field">
+        <input id="brain_fresh" type="checkbox" class="filled-in" checked="checked" name="brain[fresh]"/>
+        <label for="brain_fresh">Fresh</label>
+      </div>
+      <div class="actions">
+        <%= f.submit "Add brain" %>
+      </div>
+    <% end %>
+  </div>
+
 </div>

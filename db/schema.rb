@@ -12,25 +12,26 @@
 
 ActiveRecord::Schema.define(version: 20170613131802) do
 
-  create_table "brains", force: :cascade do |t|
+  create_table "brains", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "flavor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "iq"
     t.boolean  "fresh"
     t.integer  "zombie_id"
-    t.index ["zombie_id"], name: "index_brains_on_zombie_id"
+    t.index ["zombie_id"], name: "index_brains_on_zombie_id", using: :btree
   end
 
-  create_table "zombies", force: :cascade do |t|
+  create_table "zombies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
-    t.text     "bio"
+    t.text     "bio",        limit: 65535
     t.integer  "age"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.string   "email"
     t.boolean  "rotten"
     t.string   "avatar"
   end
 
+  add_foreign_key "brains", "zombies"
 end

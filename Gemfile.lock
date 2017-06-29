@@ -76,6 +76,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.2)
     multi_json (1.12.1)
+    mysql2 (0.4.6-x64-mingw32)
     nio4r (2.0.0)
     nokogiri (1.7.2-x64-mingw32)
       mini_portile2 (~> 2.1.0)
@@ -159,6 +160,7 @@ DEPENDENCIES
   coffee-script-source (= 1.8.0)
   jbuilder (~> 2.5)
   jquery-rails
+  mysql2
   puma (~> 3.0)
   rails (~> 5.0.3)
   record_tag_helper (~> 1.0)
