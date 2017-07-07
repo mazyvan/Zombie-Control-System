@@ -38,6 +38,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'devise'
+
 
 
 gem 'record_tag_helper', '~> 1.0'
