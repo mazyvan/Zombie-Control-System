@@ -1,5 +1,12 @@
-  <p>
-    <strong>Agregado: <%= time_ago_in_words(brain.created_at) %></strong>
-    <br>
-    <%= brain.flavor %>
-  </p>
+<tr>
+  <td><%= brain.flavor %></td>
+  <td><%= brain.iq %></td>
+  <td>
+    <% if brain.fresh %>
+      <%= image_tag 'brains/brain.png', class: 'brain-image' %>
+    <% else %>
+      <%= image_tag 'brains/brain_filled.png', class: 'brain-image' %>
+    <% end %>
+  </td>
+  <td><%= time_ago_in_words(brain.created_at) %></td>
+</tr>

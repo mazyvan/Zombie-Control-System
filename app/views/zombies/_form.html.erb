@@ -32,16 +32,17 @@
   </div>
 
   <div class="field">
-    <%= f.label :rotten %>
-    <%= f.check_box :rotten %>
+    <input id="zombie_rotten" type="checkbox" class="filled-in" checked="checked" name="zombie[rotten]"/>
+    <label for="zombie_rotten">Rotten</label>
   </div>
 
   <div class="field">
     <%= f.label :avatar %>
     <%= f.file_field :avatar, multiple: false %>
   </div>
-
+  <br>
+  <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Save Zombie", class: 'waves-effect waves-light btn blue' %>
   </div>
 <% end %>

@@ -1,6 +1,8 @@
-<h1>Editing Zombie</h1>
-
-<%= render 'form', zombie: @zombie %>
-
-<%= link_to 'Show', @zombie %> |
-<%= link_to 'Back', zombies_path %>
+<h3>Editing Zombie</h3>
+<br>
+<div class="row container">
+  <%= link_to 'Show', @zombie %> |
+  <%= link_to 'Back', zombies_path %>
+  <br><br><br><br>
+  <%= render 'form', zombie: @zombie %>
+</div>

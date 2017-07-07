@@ -39,11 +39,27 @@
   </div>
 
   <div class="col l12 s12">
-    <br>
-    <h5>Add Brain</h5>
+    <br><br><br>
+    <h4>Brains</h4>
     <div id="brains">
-      <%= render :partial => @zombie.brains.reverse %>
+      <table>
+        <thead>
+          <tr>
+            <th>Flavor</th>
+            <th>Iq</th>
+            <th>Fresh</th>
+            <th>Created since</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <%= render :partial => @zombie.brains.reverse %>
+        </tbody>
+      </table>
     </div>
+    <br><br><br>
+    <h5>Add new brain</h5>
+    <br>
     <%= form_for([@zombie, Brain.new], remote:true) do |f| %>
       <div class="field">
         <%= f.label :Flavor %>
@@ -58,7 +74,7 @@
         <label for="brain_fresh">Fresh</label>
       </div>
       <div class="actions">
-        <%= f.submit "Add brain" %>
+        <%= f.submit "Add brain", class: 'waves-effect waves-light btn blue' %>
       </div>
     <% end %>
   </div>
