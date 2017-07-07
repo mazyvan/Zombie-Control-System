@@ -40,7 +40,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 
-
+gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 
 gem 'record_tag_helper', '~> 1.0'
 
